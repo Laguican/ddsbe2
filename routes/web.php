@@ -17,6 +17,8 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+$router->get('/usersjob', 'UserJobController@index');
+$router->get('/userjob/{id}', 'UserJobController@show');
 
 $router->get('/users', 'UserController@getUsers');   // get all users records
 $router->post('/users/add', 'UserController@addUser');  // create new user record
